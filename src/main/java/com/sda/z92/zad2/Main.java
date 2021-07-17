@@ -60,21 +60,62 @@ public class Main {
         // Przypadek gdy ilość elementów jest parzysta
         // lista.size() = 10
         // 0 1 2 3 (4 5) 6 7 8 9
+        double mediana;
+        if (integerList_Copy.size() % 2 == 0) {
+            // (lista.size() / 2 - 1)
+            // lista.get( (lista.size() / 2) - 1 )
 
-        // (lista.size() / 2) = 5 index = 6 element
-        // lista.get( (lista.size() / 2) )
+            int element1 = integerList_Copy.get((integerList_Copy.size() / 2) - 1);
+            int element2 = integerList_Copy.get((integerList_Copy.size() / 2));
+            mediana = (element1 + element2) / 2.0;
+        } else {
+            // Przypadek gdy ilość elementów jest nieparzysta
+            // 0 1 2 3 4 5 6 7 8 9
+            // lista.get(?)
+            // (lista.size() / 2) = 5 index = 6 element
+            // lista.get( (lista.size() / 2) )
 
-        // (lista.size() / 2 - 1)
-        // lista.get( (lista.size() / 2) - 1 )
+            mediana = integerList_Copy.get(integerList_Copy.size() / 2);
+        }
+        System.out.println("Mediana: " + mediana);
 
-        // Przypadek gdy ilość elementów jest nieparzysta
-        // 0 1 2 3 4 5 6 7 8 9
-        // lista.get(?)
-
+        // Pamiętajcie w tym miejscu pracować na liście pierwszej (orginalnej)
         // zadeklarowanie zmiennej minimum / maximum
-        // pętla która szuka min/max
-        // jeśli trafiliśmy na liczbę mniejszą to zapisujemy nowe minimum
-        // jeśli trafiliśmy na liczbę większą to zapisujemy nowe maksimum
+        int min = integerList.get(0);
+        int max = integerList.get(0);
 
+        // pętla która szuka min/max
+        for (int i = 1; i < integerList.size(); i++) {
+            // jeśli trafiliśmy na liczbę mniejszą to zapisujemy nowe minimum
+            if (min > integerList.get(i)) {
+                min = integerList.get(i);
+            }
+
+            // jeśli trafiliśmy na liczbę większą to zapisujemy nowe maksimum
+            if (max < integerList.get(i)) {
+                max = integerList.get(i);
+            }
+        }
+        System.out.println("Max: " + max + " Min: " + min);
+
+        //     - po znalezieniu elementu znajdź index elementu maksymalnego używając kolejnej pętli for
+        int minIndex = 0;
+        int maxIndex = 0;
+
+        // pętla która szuka indeksów min/max
+        for (int i = 1; i < integerList.size(); i++) {
+            // jeśli trafiliśmy na liczbę mniejszą to zapisujemy nowe minimum
+            if (min == integerList.get(i)) {
+                minIndex = i;
+            }
+
+            // jeśli trafiliśmy na liczbę większą to zapisujemy nowe maksimum
+            if (max == integerList.get(i)) {
+                maxIndex = i;
+            }
+        }
+        System.out.println("Max index: " + maxIndex + " Min index: " + minIndex);
+        // - po znalezieniu elementów (największy i najmniejszy) znajdź index posługując się metodą indexof
+        System.out.println("Max index: " + integerList.indexOf(max) + " Min index: " + integerList.indexOf(min));
     }
 }
