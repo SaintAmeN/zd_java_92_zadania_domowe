@@ -103,7 +103,7 @@ public class Main {
         int maxIndex = 0;
 
         // pętla która szuka indeksów min/max
-        for (int i = 1; i < integerList.size(); i++) {
+        for (int i = 0; i < integerList.size(); i++) {
             // jeśli trafiliśmy na liczbę mniejszą to zapisujemy nowe minimum
             if (min == integerList.get(i)) {
                 minIndex = i;

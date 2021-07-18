@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         // deklaracja listy
+//        List<String> list = new ArrayList<>();
         List<Integer> list = new ArrayList<>();
         // deklarujemy scanner / random
         Random random = new Random();
