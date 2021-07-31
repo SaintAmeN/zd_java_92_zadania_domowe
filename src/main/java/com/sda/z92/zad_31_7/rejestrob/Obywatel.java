@@ -1,4 +1,4 @@
-package com.sda.z92.zad_31_7;
+package com.sda.z92.zad_31_7.rejestrob;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

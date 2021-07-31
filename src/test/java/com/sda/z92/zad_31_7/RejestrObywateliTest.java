@@ -1,6 +1,6 @@
 package com.sda.z92.zad_31_7;
 
-import junit.framework.TestCase;
+import com.sda.z92.zad_31_7.rejestrob.RejestrObywateli;
 import org.junit.Test;
 
 public class RejestrObywateliTest {
